@@ -131,7 +131,7 @@ window.initMap = initMap;
 </head>
 	
 <body>
-<div class="map"></div>
+<div id="map"></div>
 
     <!-- 
       The `defer` attribute causes the callback to execute after the full HTML
@@ -141,7 +141,7 @@ window.initMap = initMap;
       -->
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap&v=weekly"
-      async
+      defer
     ></script>
 	
 	
