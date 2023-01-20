@@ -2,18 +2,12 @@
 <html>
   <head>
     <title>Europe Trip</title>
-    
-    <h1> My Europe trip in 2018 <h1>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>  
+	
+	https://developers.google.com/maps/documentation/javascript/examples/overlay-symbol-animate#maps_overlay_symbol_animate-css
 <style>
-  h1 {
-    font- size: 28 px;
-  } 
    #map {
   height: 100%;
-  width: 50%;
-  margin-top: 2%;
-  margin-bottom: 5%;
-}
 }
 
 /* 
@@ -27,7 +21,7 @@ body {
 }
 </style>
 
-
+// This example adds an animated symbol to a polyline.
 
 <script>
 function initMap() {
@@ -36,31 +30,28 @@ function initMap() {
     zoom: 5,
     mapTypeId: "hybrid",
   });
-  // Define the symbol, using one of the predefined paths ('CIRCLE')
-  // supplied by the google.maps.SymbolPath.FORWARD_CLOSED_ARROW.
+  // Define the symbol, using one of the predefined paths (google.maps.SymbolPath.FORWARD_CLOSED_ARROW)
+  // supplied by the Google Maps JavaScript API.
   const lineSymbol = {
     path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
     scale: 8,
-    strokeColor: "#26a7de",
+    strokeColor: "#26a7de"",
   };
   // Create the polyline and add the symbol to it via the 'icons' property.
   const line = new google.maps.Polyline({
     path: [
-      { lat: 40.409, lng: 49.867 },
+       { lat: 40.409, lng: 49.867 },
       { lat: 47.497, lng: 19.040 },
       { lat: 50.075, lng: 14.437 },
       { lat: 52.520, lng: 13.405 },
       { lat: 52.367, lng: 4.904 },
       { lat: 41.387, lng: 2.168 },
       { lat: 40.409, lng: 49.867 },
-      
-      
     ],
     icons: [
       {
         icon: lineSymbol,
-        offset: "100%"
-       
+        offset: "100%",
       },
     ],
     map: map,
@@ -105,3 +96,5 @@ window.initMap = initMap;
     ></script>
   </body>
 </html>
+	
+	
