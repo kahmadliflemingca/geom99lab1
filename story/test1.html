@@ -5,6 +5,7 @@
   <head>
     <title>Europe Trip</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+	  <script type="module" src="./index.js"></script>
 	
     <style>
 
@@ -102,6 +103,24 @@ function animateCircle(line) {
 window.initMap = initMap;
 
 </script>
+	  <script>
+		  
+function initMap1() {
+  const map = new google.maps.Map(document.getElementById("map1"), {
+    zoom: 4,
+    center: { lat: 47.497, lng: 19.040 },
+  });
+  const image =
+    "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
+  const beachMarker = new google.maps.Marker({
+    position: { 40.409, lng: 49.867 },
+    map1,
+    icon: image,
+  });
+}
+
+window.initMap1 = initMap1;
+	  </script>
 </head>
 	
 <body>
@@ -117,6 +136,26 @@ window.initMap = initMap;
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap&v=weekly"
       defer
     ></script>
+	
+	
+<div id="map1"></div>
+
+    <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises
+      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap&v=weekly"
+      defer
+    ></script>	
+	
+	
+	
+	
+	
+	
 	
   </body>
 </html>
