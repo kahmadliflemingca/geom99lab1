@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- source: https://developers.google.com/maps/documentation/javascript/examples/overlay-symbol-animate#maps_overlay_symbol_animate-html -->
+
+<html>
+  <head>
+    <title>Europe Trip</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+	
+    <style>
+
+h1 { 
+	font-size: 26 px;
+	margin-top:2 %
+	font-style: italic;
+	text-align: center;
+}
+p {
+	margin-bottom: 0;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+	    
+#map {
+  height: 100%;
+	width: 100%;
+	margin-top: 30%;
+	margin-bottom: 25%;
+}
+.page-footer {
+		    font-size: 14px;
+		    background-color: whitesmoke ;
+}
+ul {
+     margin-bottom: 5%; 
+}
+
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+</style>
+
+	
+<script>
+// This example adds an animated symbol to a polyline.
+function initMap() {
+  const map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 47.497, lng: 19.040 },
+    zoom: 5,
+    mapTypeId: "hybrid",
+  });
+  // Define the symbol, using one of the predefined paths google.maps.SymbolPath.FORWARD_CLOSED_ARROW
+  // supplied by the Google Maps JavaScript API.
+  const lineSymbol = {
+    path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+    scale: 8,
+    strokeColor: "#26a7de",
+  };
+  // Create the polyline and add the symbol to it via the 'icons' property.
+  const line = new google.maps.Polyline({
+    path: [
+       { lat: 40.409, lng: 49.867 },
+      { lat: 47.497, lng: 19.040 },
+      { lat: 50.075, lng: 14.437 },
+      { lat: 52.520, lng: 13.405 },
+      { lat: 52.367, lng: 4.904 },
+      { lat: 41.387, lng: 2.168 },
+      { lat: 40.409, lng: 49.867 },
+    ],
+    icons: [
+      {
+        icon: lineSymbol,
+        offset: "80%",
+      },
+    ],
+    map: map,
+  });
+
+  animateCircle(line);
+}
+
+// Use the DOM setInterval() function to change the offset of the symbol
+// at fixed intervals.
+function animateCircle(line) {
+  let count = 0;
+
+  window.setInterval(() => {
+    count = (count + 1) % 200;
+
+    const icons = line.get("icons");
+
+    icons[0].offset = count / 2 + "%";
+    line.set("icons", icons);
+  }, 20);
+}
+
+window.initMap = initMap;
+
+</script>
+</head>
+	
+<body>
+<div id="map"></div>
+
+    <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises
+      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap&v=weekly"
+      defer
+    ></script>
+	
+  </body>
+</html>
+
+
