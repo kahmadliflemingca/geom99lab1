@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Animating. Symbols</title>
+    <title>Animating Symbols</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <style>
    #map {
@@ -20,6 +20,8 @@ body {
 </style>
 
 // This example adds an animated symbol to a polyline.
+
+<script>
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 20.291, lng: 153.027 },
@@ -67,8 +69,12 @@ function animateCircle(line) {
 }
 
 window.initMap = initMap;
+ </script>
+
 </head>
   <body>
+  
+  
     <div id="map"></div>
 
     <!-- 
@@ -83,4 +89,3 @@ window.initMap = initMap;
     ></script>
   </body>
 </html>
-	
