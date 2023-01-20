@@ -29,11 +29,11 @@ function initMap() {
     mapTypeId: "terrain",
   });
   // Define the symbol, using one of the predefined paths ('CIRCLE')
-  // supplied by the Google Maps JavaScript API.
+  // supplied by the google.maps.SymbolPath.FORWARD_CLOSED_ARROW.
   const lineSymbol = {
-    path: google.maps.SymbolPath.CIRCLE,
-    scale: 8,
-    strokeColor: "#393",
+    path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+    scale: 10,
+    strokeColor: "#26a7de",
   };
   // Create the polyline and add the symbol to it via the 'icons' property.
   const line = new google.maps.Polyline({
