@@ -1,12 +1,13 @@
-<!DOCTYPE html>
+!DOCTYPE html>
+<!-- source: https://developers.google.com/maps/documentation/javascript/overview#maps_map_simple-html -->
+
 <html>
   <head>
     <title>Europe Trip</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>  
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 	
-	
-<style>
-  /* 
+    <style>
+	/* 
  * Always set the map height explicitly to define the size of the div element
  * that contains the map. 
  */
@@ -23,7 +24,7 @@ body {
   margin: 0;
   padding: 0;
 }
-
+</style>
 
 <script>
 // This example adds an animated symbol to a polyline.
@@ -33,10 +34,10 @@ function initMap() {
     zoom: 6,
     mapTypeId: "terrain",
   });
-  // Define the symbol, using one of the predefined paths ('CIRCLE')
+  // Define the symbol, using one of the predefined paths google.maps.SymbolPath.FORWARD_CLOSED_ARROW
   // supplied by the Google Maps JavaScript API.
   const lineSymbol = {
-    path: google.maps.SymbolPath.CIRCLE,
+    path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
     scale: 8,
     strokeColor: "#26a7de",
   };
@@ -79,13 +80,11 @@ function animateCircle(line) {
 }
 
 window.initMap = initMap;
- </script>
 
+</script>
 </head>
-  <body>
-  
-  
-    <div id="map"></div>
+<body>
+<div id="map"></div>
 
     <!-- 
       The `defer` attribute causes the callback to execute after the full HTML
@@ -99,5 +98,4 @@ window.initMap = initMap;
     ></script>
   </body>
 </html>
-	
-	
+
