@@ -25,14 +25,14 @@ body {
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 40.409, lng: 49.867 },
-    zoom: 10,
-    mapTypeId: "terrain",
+    zoom: 2,
+    mapTypeId: "hybrid",
   });
   // Define the symbol, using one of the predefined paths ('CIRCLE')
   // supplied by the google.maps.SymbolPath.FORWARD_CLOSED_ARROW.
   const lineSymbol = {
     path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-    scale: 10,
+    scale: 8,
     strokeColor: "#26a7de",
   };
   // Create the polyline and add the symbol to it via the 'icons' property.
@@ -51,7 +51,8 @@ function initMap() {
     icons: [
       {
         icon: lineSymbol,
-        offset: "100%",
+        offset: "100%"
+        strokeColor: "#26a7de",
       },
     ],
     map: map,
