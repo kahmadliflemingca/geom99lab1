@@ -113,7 +113,7 @@ window.initMap = initMap;
 	  
 	function initMap(): void {
   const map = new google.maps.Map(
-    getElementsByClassName("map1") as HTMLElement,
+    document.getElementById("map1") as HTMLElement,
     {
       zoom: 4,
       center: { lat: -33, lng: 151 },
@@ -155,7 +155,7 @@ window.initMap = initMap;
     ></script>
 	
 	
-<div class="map1"></div>
+<div id="map1"></div>
 
     <!-- 
       The `defer` attribute causes the callback to execute after the full HTML
