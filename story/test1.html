@@ -114,6 +114,16 @@ function animateCircle(line) {
     line.set("icons", icons);
   }, 20);
 }
+	
+
+  const image =
+    "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
+  const beachMarker = new google.maps.Marker({
+    position: { lat: 39.469, lng: -0.376},
+    map,
+    icon: image,
+  });
+}
 
 window.initMap = initMap;
 	initAutocomplete();
