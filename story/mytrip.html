@@ -5,7 +5,7 @@
   <head>
     <title>Europe Trip</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-	  
+	 <script type="module" src="./index.js"></script> 
 	
     <style>
 
@@ -43,7 +43,7 @@ p {
 
 
 /* 
- * Optional: Makes the sample page fill the window. 
+ * Add background color, margin for the body. 
  */
 html,
 body {    
@@ -53,10 +53,10 @@ body {
   padding: 0;
 }
 </style>
-	  
-	
+
 <script>
 // This example adds an animated symbol to a polyline.
+
 function initMap() {
 	
   const map = new google.maps.Map(document.getElementById("map"), {
@@ -64,6 +64,12 @@ function initMap() {
     zoom: 5,
     mapTypeId: "hybrid",
   });
+  
+ 
+  
+
+
+  
   // Define the symbol, using one of the predefined paths google.maps.SymbolPath.FORWARD_CLOSED_ARROW
   // supplied by the Google Maps JavaScript API.
   const lineSymbol = {
@@ -71,6 +77,9 @@ function initMap() {
     scale: 8,
     strokeColor: "#26a7de",
   };
+  
+
+  
   // Create the polyline and add the symbol to it via the 'icons' property.
   const line = new google.maps.Polyline({
     path: [
@@ -87,19 +96,22 @@ function initMap() {
 	    
     ],
 	  
-	  strokeOpacity: 1.0,
-    strokeWeight: 2,
+	  strokeOpacity: 1,
+    strokeWeight: 1,
     icons: [
       {
         icon: lineSymbol,
-        offset: "80%",
+        offset: "50%",
       },
     ],
     map: map,
   });
+  
 
   animateArrow(line);
 }
+
+
 
 // Use the DOM setInterval() function to change the offset of the symbol
 // at fixed intervals.
@@ -107,7 +119,7 @@ function animateArrow(line) {
   let count = 0;
 
   window.setInterval(() => {
-    count = (count + 1) % 200;
+    count = (count + 1) % 300;
 
     const icons = line.get("icons");
 
@@ -117,14 +129,16 @@ function animateArrow(line) {
 }
 	
 
-  
+ 
 
 window.initMap = initMap;
 	initAutocomplete();
+	
+
 
 </script>
-	  
-	  
+	
+
 
 	  
 </head>
@@ -173,7 +187,7 @@ It  is divided by the Danube river with on one side the hilly “Buda” area an
       and consistent behavior across browsers, consider loading using Promises
       with https://www.npmjs.com/package/@googlemaps/js-api-loader.
       -->
-    <script
+    <script 
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap&v=weekly"
       defer
     ></script>
