@@ -10,7 +10,7 @@ Be creative and use multiple parameters from the API documentation to earn a top
 
 ```
  https://maps.googleapis.com/maps/api/directions/json?origin=place_id:ChIJpTvG15DL1IkRd8S0KlBVNTI&destination=place_id:ChIJbSDXGjejKogRWlNLqAAPLh0
-&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE
+&key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w
 &avoid=tolls|highways
 &language=fr&units=imperial
 &departure_time=1679776097
