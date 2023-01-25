@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- source: https://developers.google.com/maps/documentation/javascript/examples/overlay-symbol-animate#maps_overlay_symbol_animate-html -->
+<!-- source: https://github.com/googlemaps/js-samples/blob/main/samples/overlay-symbol-animate/index.ts -->
 
 <html>
   <head>
@@ -55,7 +55,7 @@ body {
 </style>
 
 <script>
-// This example adds an animated symbol to a polyline.
+// This script adds an animated symbol to a polyline.
 
 function initMap() {
 	
@@ -65,8 +65,8 @@ function initMap() {
     mapTypeId: "hybrid",
   });
   
- 
-  
+
+
 
 
   
@@ -79,7 +79,7 @@ function initMap() {
   };
   
 
-  
+ 
   // Create the polyline and add the symbol to it via the 'icons' property.
   const line = new google.maps.Polyline({
     path: [
@@ -109,7 +109,9 @@ function initMap() {
   
 
   animateArrow(line);
+  
 }
+
 
 
 
@@ -126,10 +128,11 @@ function animateArrow(line) {
     icons[0].offset = count / 2 + "%";
     line.set("icons", icons);
   }, 20);
+  
+  
 }
-	
 
- 
+
 
 window.initMap = initMap;
 	initAutocomplete();
@@ -201,4 +204,3 @@ It  is divided by the Danube river with on one side the hilly “Buda” area an
 	
   </body>
 </html>
-
