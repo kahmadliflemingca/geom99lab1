@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<!-- source: https://github.com/googlemaps/js-samples/blob/main/samples/overlay-symbol-animate/index.ts -->
+<!-- source 1: https://github.com/googlemaps/js-samples/blob/main/samples/overlay-symbol-animate/index.ts
+Source 2 : https://github.com/googlemaps/js-samples/blob/main/samples/icon-simple/index.ts -->
 
 <html>
   <head>
@@ -110,6 +111,62 @@ function initMap() {
 
   animateArrow(line);
   
+  
+  const image =
+    "images/az.png";
+  const azerb = new google.maps.Marker({
+    position: { lat: 40.409, lng: 49.867 },
+    map,
+    icon: image,
+  });
+  const hungary=
+    "images/hungary.png";
+  const budapest= new google.maps.Marker({
+    position: { lat: 47.497, lng: 19.040 },
+    map,
+    icon: hungary,
+  });
+   const cz =
+    "images/cz.png";
+    const prague= new google.maps.Marker({
+    position: { lat: 50.075, lng: 14.437 },
+    map,
+    icon: cz,
+  });
+  const germany =
+    "images/germany.png";
+    const berlin= new google.maps.Marker({
+    position: { lat: 52.520, lng: 13.405 },
+    map,
+    icon: germany,
+  });
+  const netherland =
+    "images/netherland.png";
+    const amsterdam= new google.maps.Marker({
+    position: { lat: 52.367, lng: 4.904 },
+    map,
+    icon: netherland,
+  });
+  
+   const spain =
+    "images/spain.png";
+    const madrid= new google.maps.Marker({
+    position: { lat: 40.416, lng: -3.703 },
+    map,
+    icon: spain,
+  });
+  
+   const valencia= new google.maps.Marker({
+    position: { lat: 39.469, lng: -0.376 },
+    map,
+    icon: spain,
+  });
+  
+  const barcelona= new google.maps.Marker({
+    position: {  lat: 41.387, lng: 2.168 },
+    map,
+    icon: spain,
+  });
 }
 
 
@@ -135,7 +192,7 @@ function animateArrow(line) {
 
 
 window.initMap = initMap;
-	initAutocomplete();
+
 	
 
 
@@ -204,3 +261,4 @@ It  is divided by the Danube river with on one side the hilly “Buda” area an
 	
   </body>
 </html>
+
