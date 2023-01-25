@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <!-- source 1: https://github.com/googlemaps/js-samples/blob/main/samples/overlay-symbol-animate/index.ts
-Source 2 : https://github.com/googlemaps/js-samples/blob/main/samples/icon-simple/index.ts -->
+Source 2 : https://github.com/googlemaps/js-samples/blob/main/samples/icon-simple/index.ts 
+Author: Khazana Ahmadli
+Date: Jan 24, 2023-->
 
 <html>
   <head>
     <title>Europe Trip</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-	 <script type="module" src="./index.js"></script> 
+	 
 	
     <style>
 
@@ -37,10 +39,20 @@ p {
 #map {
   height: 100%;
 	width: 100%;
-	margin-top: 30%;
+	margin-top: 5%;
 	margin-bottom: 25%;
 }
 
+.tool {
+  
+	margin-top: 15%;
+	margin-bottom: 0;
+	font-style: italic;
+	font-weight: 900;
+	border-style: outset;
+	
+	
+}
 
 
 /* 
@@ -63,7 +75,7 @@ function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 47.497, lng: 19.040 },
     zoom: 5,
-    mapTypeId: "hybrid",
+    mapTypeId: "satellite",
   });
   
 
@@ -111,7 +123,8 @@ function initMap() {
 
   animateArrow(line);
   
-  
+  // Add Flag icons on each destination 
+  // Source: https://github.com/googlemaps/js-samples/blob/main/samples/icon-simple/index.ts 
   const image =
     "images/az.png";
   const azerb = new google.maps.Marker({
@@ -235,9 +248,9 @@ It  is divided by the Danube river with on one side the hilly “Buda” area an
 	
 	
 	
-	
-<p> This handy tool will give you more information regarding how I completed my whole trip :) </p>
-	
+<div class="tool">	
+<p> This handy tool will give you more information regarding how I completed my whole trip. If you would like to see the map labels as well please turn them on by clicking on the Satellite bottom that is on the left hand side:) </p>
+	</div>
 	
 	<div id="map"> </div>
 
